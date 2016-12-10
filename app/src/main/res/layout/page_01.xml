@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:background="#ededed" >
+<LinearLayout
+android:orientation="vertical"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent">
+    
+        <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:id="@+id/top"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+            <TextView   android:layout_width="0dp"
+ 	       android:layout_height="wrap_content"
+ 	       android:layout_weight="0.2"
+ 	       android:text="订餐"
+ 	       android:textSize="16sp"
+ 	       android:gravity="center"
+ 	       android:drawableTop="@mipmap/dc"
+ 	       android:layout_marginTop="13dp"
+ 	       android:contentDescription="@null"/>
+                        <TextView   android:layout_width="0dp"
+ 	       android:layout_height="wrap_content"
+ 	       android:layout_weight="0.2"
+ 	       android:text="外卖"
+ 	       android:textSize="16sp"
+ 	       android:gravity="center"
+ 	       android:drawableTop="@mipmap/wm"
+ 	       android:layout_marginTop="13dp"
+ 	       android:contentDescription="@null"/>
+                                    <TextView   android:layout_width="0dp"
+ 	       android:layout_height="wrap_content"
+ 	       android:layout_weight="0.2"
+ 	       android:text="娱乐"
+ 	       android:textSize="16sp"
+ 	       android:gravity="center"
+ 	       android:drawableTop="@mipmap/yl"
+ 	       android:layout_marginTop="13dp"
+ 	       android:contentDescription="@null"/>
+                                                <TextView   android:layout_width="0dp"
+ 	       android:layout_height="wrap_content"
+ 	       android:layout_weight="0.2"
+ 	       android:text="更多"
+ 	       android:textSize="16sp"
+ 	       android:gravity="center"
+ 	       android:drawableTop="@mipmap/gd"
+ 	       android:layout_marginTop="13dp"
+ 	       android:contentDescription="@null"/>
+        </LinearLayout>
+  <View android:layout_width="fill_parent"
+   android:layout_height="0.5dp"
+   android:background="#cccccc" />  
+  <View android:layout_width="fill_parent"
+   android:layout_height="0.5dp"
+   android:layout_marginTop="10dp"
+   android:background="#cccccc" />  
+            
+        <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/huodong"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+            <TextView   android:layout_width="0dp"
+ 	       android:layout_height="wrap_content"
+ 	       android:layout_weight="0.33"
+ 	       android:text="名店抢购 "
+ 	       android:drawableBottom="@mipmap/mdqg"
+ 	       android:drawablePadding="10dp"
+ 	       android:gravity="center"
+ 	       android:textSize="26dp"
+ 	       android:textColor="#333333"
+ 	       android:layout_marginTop="13dp"
+ 	       android:contentDescription="@null"/>
+							              <View android:layout_width="0.5dp"
+							   android:layout_height="fill_parent"
+							   android:background="#cccccc" />  
+ 	                   <TextView   android:layout_width="0dp"
+ 	       android:layout_height="wrap_content"
+ 	       android:layout_weight="0.33"
+ 	       android:text="名店抢购 "
+ 	       android:drawableBottom="@mipmap/mdqg"
+ 	       android:drawablePadding="10dp"
+ 	       android:gravity="center"
+ 	       android:textSize="26dp"
+ 	       android:textColor="#333333"
+ 	       android:layout_marginTop="13dp"
+ 	       android:contentDescription="@null"/> 
+ 	       							       <View android:layout_width="0.5dp"
+							   android:layout_height="fill_parent"
+							   android:background="#cccccc" />
+ 	                   <TextView   android:layout_width="0dp"
+ 	       android:layout_height="wrap_content"
+ 	       android:layout_weight="0.33"
+ 	       android:text="名店抢购 "
+ 	       android:drawableBottom="@mipmap/mdqg"
+ 	       android:drawablePadding="10dp"
+ 	       android:gravity="center"
+ 	       android:textSize="26dp"
+ 	       android:textColor="#333333"
+ 	       android:layout_marginTop="13dp"
+ 	       android:contentDescription="@null"/>                                    
+                  
+        </LinearLayout>
+  <View android:layout_width="fill_parent"
+   android:layout_height="0.5dp"
+   android:background="#cccccc" /> 
+           <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/huodong2"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+            <TextView   android:layout_width="0dp"
+ 	       android:layout_height="wrap_content"
+ 	       android:layout_weight="0.33"
+ 	       android:text="名店抢购 "
+ 	       android:drawableBottom="@mipmap/mdqg"
+ 	       android:drawablePadding="10dp"
+ 	       android:gravity="center"
+ 	       android:textSize="26dp"
+ 	       android:textColor="#333333"
+ 	       android:layout_marginTop="13dp"
+ 	       android:contentDescription="@null"/>
+							              <View android:layout_width="0.5dp"
+							   android:layout_height="fill_parent"
+							   android:background="#cccccc" />  
+ 	                   <TextView   android:layout_width="0dp"
+ 	       android:layout_height="wrap_content"
+ 	       android:layout_weight="0.33"
+ 	       android:text="名店抢购 "
+ 	       android:drawableBottom="@mipmap/mdqg"
+ 	       android:drawablePadding="10dp"
+ 	       android:gravity="center"
+ 	       android:textSize="26dp"
+ 	       android:textColor="#333333"
+ 	       android:layout_marginTop="13dp"
+ 	       android:contentDescription="@null"/> 
+ 	       							       <View android:layout_width="0.5dp"
+							   android:layout_height="fill_parent"
+							   android:background="#cccccc" />
+ 	                   <TextView   android:layout_width="0dp"
+ 	       android:layout_height="wrap_content"
+ 	       android:layout_weight="0.33"
+ 	       android:text="名店抢购 "
+ 	       android:drawableBottom="@mipmap/mdqg"
+ 	       android:drawablePadding="10dp"
+ 	       android:gravity="center"
+ 	       android:textSize="26dp"
+ 	       android:textColor="#333333"
+ 	       android:layout_marginTop="13dp"
+ 	       android:contentDescription="@null"/>
+ 	                                                       
+        </LinearLayout>
+  <View android:layout_width="fill_parent"
+   android:layout_height="0.5dp"
+   android:background="#cccccc" />  
+        <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/neirong"
+        android:background="#ffffff"
+        android:orientation="vertical">
+           <TextView   android:layout_width="fill_parent"
+ 	       android:layout_height="wrap_content"
+ 	       android:text="猜你喜欢 "
+ 	       android:gravity="left"
+ 	       android:layout_marginLeft="10dp"
+ 	       android:textSize="16sp"
+ 	       android:textColor="#737373"
+ 	       android:layout_marginTop="13dp"
+ 	       android:contentDescription="@null"/>  
+				         <LinearLayout 
+				        android:layout_width="fill_parent"
+				        android:layout_height="fill_parent"
+				        android:id="@+id/neirong1"
+				        android:layout_marginTop="15dp"
+				        android:background="#ffffff"
+				        android:orientation="horizontal">
+							   <ImageView android:layout_width="wrap_content"
+						       android:layout_height="fill_parent"
+						       android:layout_marginLeft="10dp"
+						       android:scaleType="fitXY"
+						       android:src="@mipmap/sj"
+						       android:contentDescription="@null"
+						       />
+							   <LinearLayout 
+						        android:layout_width="wrap_content"
+						        android:layout_height="fill_parent"
+						        android:id="@+id/weizhi"
+						        android:layout_marginLeft="10dp"
+						        android:layout_weight="0.5"
+						        android:background="#ffffff"
+						        android:orientation="vertical">
+						                <TextView   android:layout_width="wrap_content"
+								 	       android:layout_height="0dp"
+								 	       android:layout_weight="0.33"
+								 	       android:text="金谷大酒店兰亭序主题餐厅 "
+								 	       android:textSize="18sp"
+								 	       android:textColor="#000000"
+								 	       android:contentDescription="@null"/> 
+								 	        <TextView   android:layout_width="wrap_content"
+								 	       android:layout_height="0dp"
+								 	       android:layout_weight="0.33"
+								 	       android:text="[涑河街]超值8-10人餐，包间免费 "
+								 	       android:textSize="14sp"
+								 	       android:textColor="#737373"
+								 	       android:contentDescription="@null"/>
+							 <LinearLayout 
+						        android:layout_width="wrap_content"
+						        android:layout_height="0dp"
+						        android:layout_weight="0.33"
+						        android:id="@+id/jiage"
+						        android:background="#ffffff"
+						        android:orientation="horizontal">
+								 	        <TextView   android:layout_width="0dp"
+								 	       android:layout_height="wrap_content"
+								 	       android:layout_weight="0.5"
+								 	       android:text="￥298"
+								 	       android:textSize="18sp"
+								 	       android:textColor="#27bea0"
+								 	       android:contentDescription="@null"/> 
+								 	        <TextView   android:layout_width="0dp"
+								 	       android:layout_height="wrap_content"
+								 	       android:layout_weight="0.5"
+								 	       android:layout_marginLeft="10dp"
+								 	       android:text="￥387"
+								 	       android:textSize="14sp"
+								 	       android:textColor="#737373"
+								 	       android:contentDescription="@null"/>
+							</LinearLayout>	 	       
+						        </LinearLayout>
+							 <LinearLayout
+								 android:layout_width="wrap_content"
+								 android:layout_height="fill_parent"
+								 android:id="@+id/juli"
+								 android:layout_weight="0.3"
+								 android:layout_marginRight="8dp"
+								 android:background="#ffffff"
+								 android:orientation="vertical">
+								 <TextView   android:layout_width="wrap_content"
+								 android:layout_height="0dp"
+								 android:layout_weight="0.7"
+								 android:text="71m"
+								 android:layout_gravity="right"
+								 android:textSize="14sp"
+								 android:textColor="#737373"
+								 android:contentDescription="@null"/>
+								 <TextView   android:layout_width="wrap_content"
+									 android:layout_height="0dp"
+									 android:layout_weight="0.3"
+									 android:text="已售3211"
+									 android:layout_gravity="right"
+									 android:textSize="12sp"
+									 android:textColor="#737373"
+									 android:contentDescription="@null"/>
+							 </LinearLayout>
+				        </LinearLayout>
+        </LinearLayout>
+	<View android:layout_width="fill_parent"
+		android:layout_height="10dp"
+		android:background="#FFFFFF" />
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:id="@+id/neirong2"
+		android:background="#ffffff"
+		android:orientation="horizontal">
+		<ImageView android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:layout_marginLeft="10dp"
+			android:scaleType="fitXY"
+			android:src="@mipmap/sj"
+			android:contentDescription="@null"
+			/>
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:id="@+id/weizhi2"
+			android:layout_marginLeft="10dp"
+			android:layout_weight="0.5"
+			android:background="#ffffff"
+			android:orientation="vertical">
+			<TextView   android:layout_width="wrap_content"
+				android:layout_height="0dp"
+				android:layout_weight="0.33"
+				android:text="金谷大酒店兰亭序主题餐厅 "
+				android:textSize="18sp"
+				android:textColor="#000000"
+				android:contentDescription="@null"/>
+			<TextView   android:layout_width="wrap_content"
+				android:layout_height="0dp"
+				android:layout_weight="0.33"
+				android:text="[涑河街]超值8-10人餐，包间免费 "
+				android:textSize="14sp"
+				android:textColor="#737373"
+				android:contentDescription="@null"/>
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="0dp"
+				android:layout_weight="0.33"
+				android:id="@+id/jiage2"
+				android:background="#ffffff"
+				android:orientation="horizontal">
+				<TextView   android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="0.5"
+					android:text="￥298"
+					android:textSize="18sp"
+					android:textColor="#27bea0"
+					android:contentDescription="@null"/>
+				<TextView   android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="0.5"
+					android:layout_marginLeft="10dp"
+					android:text="￥387"
+					android:textSize="14sp"
+					android:textColor="#737373"
+					android:contentDescription="@null"/>
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:id="@+id/juli2"
+			android:layout_weight="0.3"
+			android:layout_marginRight="8dp"
+			android:background="#ffffff"
+			android:orientation="vertical">
+			<TextView   android:layout_width="wrap_content"
+				android:layout_height="0dp"
+				android:layout_weight="0.7"
+				android:text="71m"
+				android:layout_gravity="right"
+				android:textSize="14sp"
+				android:textColor="#737373"
+				android:contentDescription="@null"/>
+			<TextView   android:layout_width="wrap_content"
+				android:layout_height="0dp"
+				android:layout_weight="0.3"
+				android:text="已售3211"
+				android:layout_gravity="right"
+				android:textSize="12sp"
+				android:textColor="#737373"
+				android:contentDescription="@null"/>
+		</LinearLayout>
+	</LinearLayout>
+
+
+</LinearLayout>
+
+
+
+	</ScrollView>
