@@ -1,0 +1,214 @@
+package com.saijie.youka;
+
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.os.Bundle;
+import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.saijie.youka.base.ContentAdapter;
+import com.saijie.youka.popup.PopupMenu;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainActivity extends Activity {
+
+    private ImageView menu_icon;
+    private PopupMenu popupMenu;
+
+
+    // 布局集合 实现主界面的左右滑动效果
+    private List<ImageView> iconList; // 图标集合
+    private List<TextView> textList; // 文字集合
+    private LayoutInflater mInflater;
+
+    private ImageView indexIconSelect;
+    private ImageView indexIconNormal;
+    private ImageView findIconSelect;
+    private ImageView findIconNormal;
+    private ImageView meIconSelect;
+    private ImageView meIconNormal;
+
+    private TextView indexTextSelect;
+    private TextView indexTextNormal;
+    private TextView findTextSelect;
+    private TextView findTextNormal;
+    private TextView meTextSelect;
+    private TextView meTextNormal;
+
+    private ArrayList<View> viewList;
+    private ViewPager viewPager;
+
+    private View indexView;
+    private View findView;
+    private View meView;
+    private final int INDEX = 0; // 首页菜单索引
+    private final int FIND_INDEX = 1; // 发现菜单索引
+    private final int ME_INDEX = 2; // 我的菜单索引
+    private int curIndex; // 当前菜单索引
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        // 初始化控件
+        initView();
+        //实现右上角弹出菜单
+        popupMenu = new PopupMenu(this);
+        menu_icon = (ImageView) findViewById(R.id.menu_icon);
+        menu_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                popupMenu.showLocation(R.id.menu_icon);//设置弹出菜单弹出的位置
+            }
+        });
+
+    }
+
+    //实现主界面的左右滑动效果
+    @SuppressLint("InflateParams")
+    private void initView() {
+        mInflater = LayoutInflater.from(this);
+        viewList = new ArrayList<View>();
+        iconList = new ArrayList<ImageView>();
+        textList = new ArrayList<TextView>();
+
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+
+        indexIconSelect = (ImageView) findViewById(R.id.index_icon_select);
+        indexIconNormal = (ImageView) findViewById(R.id.index_icon_normal);
+        findIconSelect = (ImageView) findViewById(R.id.find_icon_select);
+        findIconNormal = (ImageView) findViewById(R.id.find_icon_normal);
+        meIconSelect = (ImageView) findViewById(R.id.me_icon_select);
+        meIconNormal = (ImageView) findViewById(R.id.me_icon_normal);
+
+        indexTextSelect = (TextView) findViewById(R.id.index_text_select);
+        indexTextNormal = (TextView) findViewById(R.id.index_text_normal);
+        findTextSelect = (TextView) findViewById(R.id.find_text_select);
+        findTextNormal = (TextView) findViewById(R.id.find_text_normal);
+        meTextSelect = (TextView) findViewById(R.id.me_text_select);
+        meTextNormal = (TextView) findViewById(R.id.me_text_normal);
+
+        indexView = mInflater.inflate(R.layout.page_01, null);
+        findView = mInflater.inflate(R.layout.page_03, null);
+        meView = mInflater.inflate(R.layout.page_04, null);
+
+        viewList.add(indexView);
+        viewList.add(findView);
+        viewList.add(meView);
+
+        iconList.add(indexIconNormal);
+        iconList.add(indexIconSelect);
+        iconList.add(findIconNormal);
+        iconList.add(findIconSelect);
+        iconList.add(meIconNormal);
+        iconList.add(meIconSelect);
+
+        textList.add(indexTextNormal);
+        textList.add(indexTextSelect);
+        textList.add(findTextNormal);
+        textList.add(findTextSelect);
+        textList.add(meTextNormal);
+        textList.add(meTextSelect);
+
+        viewPager.setAdapter(new ContentAdapter(viewList));
+        viewPager.addOnPageChangeListener(pageListener);
+
+        indexIconNormal.setAlpha(0f);
+        indexTextNormal.setAlpha(0f);
+        findIconSelect.setAlpha(0f);
+        findTextSelect.setAlpha(0f);
+        meIconSelect.setAlpha(0f);
+        meTextSelect.setAlpha(0f);
+    }
+
+    OnPageChangeListener pageListener = new OnPageChangeListener() {
+        @Override
+        public void onPageSelected(int index) {
+            curIndex = index;
+        }
+
+        @Override
+        public void onPageScrolled(int index, float ratio, int offset) {
+            if (ratio > 0) {
+                colorChange(index, index + 1, ratio);
+            }
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int arg0) {
+        }
+    };
+
+    /**
+     * @param srcIndex  失去焦点的索引
+     * @param destIndex 选中的索引
+     * @param ratio     透明的比例
+     */
+    private void colorChange(int srcIndex, int destIndex, float ratio) {
+        iconList.get(srcIndex * 2).setAlpha(ratio);
+        iconList.get(srcIndex * 2 + 1).setAlpha(1 - ratio);
+
+        iconList.get(destIndex * 2).setAlpha(1 - ratio);
+        iconList.get(destIndex * 2 + 1).setAlpha(ratio);
+
+        textList.get(srcIndex * 2).setAlpha(ratio);
+        textList.get(srcIndex * 2 + 1).setAlpha(1 - ratio);
+
+        textList.get(destIndex * 2).setAlpha(1 - ratio);
+        textList.get(destIndex * 2 + 1).setAlpha(ratio);
+    }
+
+    public void showIndex(View view) {
+        if (curIndex != INDEX) {
+            colorChange(INDEX, curIndex, 0);
+            viewPager.setCurrentItem(INDEX, false);
+        }
+    }
+
+    public void showFind(View view) {
+        if (curIndex != FIND_INDEX) {
+            colorChange(FIND_INDEX, curIndex, 0);
+            viewPager.setCurrentItem(FIND_INDEX, false);
+        }
+    }
+
+    public void showMy(View view) {
+        if (curIndex != ME_INDEX) {
+            colorChange(ME_INDEX, curIndex, 0);
+            viewPager.setCurrentItem(ME_INDEX, false);
+        }
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
+
+
+
+
+
+
+}
+

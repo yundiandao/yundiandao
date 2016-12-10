@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical" >
+
+     <SurfaceView android:id="@+id/capture_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" /> 
+    <RelativeLayout android:id="@+id/capture_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" > 
+        <ImageView android:id="@+id/capture_shadow_top"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/left_menu_shadow"
+            android:contentDescription="@null" />  
+	        <RelativeLayout android:id="@+id/capture_crop_view"
+	            android:layout_width="250dp"
+	            android:layout_height="250dp"
+	            android:layout_below="@id/capture_shadow_top"
+	            android:layout_centerHorizontal="true"
+	            android:background="@mipmap/qr_code_bg" >
+            <ImageView android:id="@+id/capture_scan_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:src="@mipmap/scan_line"
+                android:contentDescription="@null"  />
+        	</RelativeLayout>
+        	<TextView android:layout_width="match_parent"
+        	    android:layout_height="wrap_content"
+        	    android:text="@string/qr_text"
+        	    android:layout_below="@id/capture_crop_view"
+        	    android:gravity="center_horizontal"
+        	    android:paddingTop="5dp"
+        	    android:textColor="#FFFFFF"/>
+        <ImageView android:id="@+id/capture_shadow_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/capture_crop_view"
+            android:background="@drawable/left_menu_shadow"
+            android:contentDescription="@null"  /> 
+        <ImageView android:id="@+id/capture_mask_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@id/capture_shadow_bottom"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/capture_shadow_top"
+            android:layout_toStartOf="@id/capture_crop_view"
+            android:background="@drawable/left_menu_shadow" 
+            android:contentDescription="@null" /> 
+        <ImageView android:id="@+id/capture_mask_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@id/capture_shadow_bottom"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/capture_shadow_top"
+            android:layout_toEndOf="@id/capture_crop_view"
+            android:background="@drawable/left_menu_shadow"
+            android:contentDescription="@null"  />
+        <include layout="@layout/top_centent"/> 
+    </RelativeLayout>  
+
+</RelativeLayout>
