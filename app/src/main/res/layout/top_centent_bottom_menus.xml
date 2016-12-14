@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="56dp"
+    android:layout_height="156dp"
     android:orientation="vertical" >
     
     <LinearLayout android:layout_width="fill_parent"
@@ -16,38 +16,80 @@
  
          <TextView android:layout_width="0dp"
  	        android:layout_height="fill_parent"
- 	        android:layout_weight="0.4"
+ 	        android:layout_weight="0.3"
  	        android:layout_marginLeft="10dp"
  	        android:gravity="center"
  	        android:text="银雀山.."
  	        android:drawableLeft="@mipmap/dwtb"
  	        android:drawableRight="@mipmap/dwtb_2"
- 	        android:textColor="#FFFFFF"
- 	        android:textSize="18sp"
- 	        android:textStyle="bold"/>
-          <ImageView android:layout_width="0dp"
- 	       android:layout_height="wrap_content"
- 	       android:layout_weight="0.1"
- 	       android:layout_marginTop="13dp"
- 	       android:contentDescription="@null"/>
-          
- 	    <TextView android:layout_width="0dp"
- 	        android:layout_height="fill_parent"
- 	        android:layout_weight="0.5"
- 	        android:gravity="center"
- 	        android:text="输入商户名称"
+		    android:clickable="true"
+			android:onClick="showAddress"
  	        android:textColor="#FFFFFF"
  	        android:textSize="18sp"
  	        android:textStyle="bold"/>
 
+		<ImageView android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.6"
+			android:gravity="center"
+			android:src="@mipmap/ss"
+			android:clickable="true"
+			android:onClick="showSearch"
+			android:layout_marginTop="5dp"
+			android:contentDescription="@null"/>
+
  	   <ImageView android:layout_width="0dp"
  	       android:layout_height="wrap_content"
  	       android:layout_weight="0.1"
- 	       android:layout_marginRight="10dp"
+ 	       android:layout_marginRight="5dp"
  	       android:id="@+id/menu_icon" 
  	       android:src="@mipmap/xlcd"
  	       android:layout_marginTop="10dp"
  	       android:contentDescription="@null"/>
     </LinearLayout>
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="100dp"
+		android:id="@+id/top"
+		android:background="#ffffff"
+		android:orientation="horizontal">
+		<TextView   android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.2"
+			android:text="订餐"
+			android:textSize="16sp"
+			android:gravity="center"
+			android:drawableTop="@mipmap/dc"
+			android:layout_marginTop="13dp"
+			android:contentDescription="@null"/>
+		<TextView   android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.2"
+			android:text="外卖"
+			android:textSize="16sp"
+			android:gravity="center"
+			android:drawableTop="@mipmap/wm"
+			android:layout_marginTop="13dp"
+			android:contentDescription="@null"/>
+		<TextView   android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.2"
+			android:text="娱乐"
+			android:textSize="16sp"
+			android:gravity="center"
+			android:drawableTop="@mipmap/yl"
+			android:layout_marginTop="13dp"
+			android:contentDescription="@null"/>
+		<TextView   android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.2"
+			android:text="更多"
+			android:textSize="16sp"
+			android:gravity="center"
+			android:drawableTop="@mipmap/gd"
+			android:layout_marginTop="13dp"
+			android:contentDescription="@null"/>
+	</LinearLayout>
 
 </LinearLayout>

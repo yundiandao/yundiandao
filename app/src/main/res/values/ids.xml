@@ -8,4 +8,9 @@
   <item type="id" name="restart_preview"/>
   <item type="id" name="return_scan_result"/>
   <item type="id" name="selected_view"/>
+
+  <item type="id" name="rakethrough"/>
+
+  <item type="id" name="sousuo"/>
+
 </resources>
