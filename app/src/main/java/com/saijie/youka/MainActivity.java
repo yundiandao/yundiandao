@@ -2,9 +2,13 @@ package com.saijie.youka;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,6 +17,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.saijie.youka.base.ContentAdapter;
+import com.saijie.youka.fn.AddressActivity;
+import com.saijie.youka.fn.SearchActivity;
 import com.saijie.youka.popup.PopupMenu;
 
 import java.util.ArrayList;
@@ -186,6 +192,61 @@ public class MainActivity extends Activity {
             viewPager.setCurrentItem(ME_INDEX, false);
         }
     }
+
+
+    public void showSearch(View view){
+        Intent intent = new Intent(MainActivity.this, SearchActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
+
+    }
+    public void showAddress(View view){
+         Intent intent = new Intent(MainActivity.this, AddressActivity.class);
+         intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+         startActivity(intent);
+
+    }
+
+
+    //防止自己写的应用程序不小心点击退出键而直接退出
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if (keyCode == KeyEvent.KEYCODE_BACK )
+        {
+            // 创建退出对话框
+            AlertDialog isExit = new AlertDialog.Builder(this).create();
+            // 设置对话框标题
+            isExit.setTitle("系统提示");
+            // 设置对话框消息
+            isExit.setMessage("确定要退出吗");
+            // 添加选择按钮并注册监听
+            isExit.setButton("确定", listener);
+            isExit.setButton2("取消", listener);
+            // 显示对话框
+            isExit.show();
+        }
+        return false;
+    }
+    /**监听对话框里面的button点击事件---onKeyDown*/
+    DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener()
+    {
+        public void onClick(DialogInterface dialog, int which)
+        {
+            switch (which)
+            {
+                case AlertDialog.BUTTON_POSITIVE:// "确认"按钮退出程序
+                    finish();
+                    break;
+                case AlertDialog.BUTTON_NEGATIVE:// "取消"第二个按钮取消对话框
+                    break;
+                default:
+                    break;
+            }
+        }
+    };
+
+
 
 
     @Override

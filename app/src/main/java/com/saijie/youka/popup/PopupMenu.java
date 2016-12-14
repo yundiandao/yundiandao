@@ -13,6 +13,7 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.PopupWindow;
 
 import com.saijie.youka.R;
+import com.saijie.youka.fn.FqjcActivity;
 import com.saijie.youka.qr.CaptureActivity;
 
 /**
@@ -71,6 +72,8 @@ public class PopupMenu extends PopupWindow implements OnClickListener {
 		Intent intent = new Intent();
 		
 		if (v == v_item1) {
+			intent.setClass(v.getContext(),FqjcActivity.class);
+			v.getContext().startActivity(intent);
 			
 		} else if (v == v_item2) { 
 			intent.setClass(v.getContext(),CaptureActivity.class);
