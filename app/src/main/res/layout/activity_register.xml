@@ -1,0 +1,156 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#ededed"
+                tools:context=".fn.RegisterActivity">
+
+    <!--头部-->
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="6dp"
+                  android:background="#2bd0af">
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="50dp"
+                  android:id="@+id/toptwo"
+                  android:background="#27bea0"
+                  android:orientation="horizontal">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="0.2"
+        android:layout_height="match_parent"
+        android:text="返回"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_marginLeft="20dp"
+        android:drawableLeft="@mipmap/back"
+        android:onClick="goback"
+        android:clickable="true"
+        android:textColor="#FFFFFF"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"/>
+    </LinearLayout>
+    <!--头部End-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ffffff"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:text="1输入手机号"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="#27bea0"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.05"
+            android:text=">"
+            android:gravity="center"
+            android:textColor="#999999"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:text="2输入验证码"
+            android:gravity="center"
+            android:textColor="#999999"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:text=">"
+            android:gravity="center"
+            android:textColor="#999999"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="3设置密码"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:textColor="#999999"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ffffff"
+        android:layout_marginTop="20dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="请输入手机号"
+            android:background="@drawable/bg_login"
+            android:textColor="#999999"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.05"
+            android:background="#ededed"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:text="发送验证码"
+            android:textColor="#ffffff"
+            android:clickable="true"
+            android:onClick="showYzm"
+            android:background="@drawable/bg_button_yzm_select"
+            android:gravity="center"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.05"
+            android:background="#ededed"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我已经阅读同意"
+            android:layout_marginLeft="15dp"
+            android:padding="5dp"
+            android:button="@drawable/radiobutton_register"
+            android:textSize="18sp"
+            android:textColor="#333333"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《云点道服务协议》"
+            android:textColor="#27bea0"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

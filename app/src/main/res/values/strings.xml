@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="common_no_data_txt">"暂无数据"</string>
+    <string name="common_no_data">没有找到符合条件的房源</string>
+
     <string name="app_name">Youka</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string name="menu_settings">Settings</string>
+    <string name="no_data">没有找到符合条件的房源</string>
 
     <string name="search">输入商户名、地点</string>
     <string name="address">请输入地址</string>
@@ -17,10 +23,33 @@
     <string name="payment">收付款</string>
     <string name="about">关于与帮助</string>
 
+    <string name="groupchat">发起聚餐</string>
+    <string name="addfriend">添加老友</string>
+    <string name="qrcode">扫一扫</string>
+    <string name="money">关于与帮助</string>
+
     <string name="qr_code">二维码/条码</string>
     <string name="qr_text">将二维码/条码放入框内,即可自动扫描</string>
     <string name="scan_album">从相册中选取二维码</string>
     <string name="scan_desktop">将扫一扫放到桌面</string>
     <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_seller">SellerActivity</string>
+    <string name="test"><![CDATA[<0.5km]]></string>
+
+    <string name="pl">打电话预定的单间，一开始还不知道位置在网上搜了一下，没想到位置这么近。</string>
+    <string name="pl2">十个人的量足够了，很喜欢这里兰亭序的厨师好像是郯城的厨师口味做菜都爽呆了...</string>
+
+
+    <string name="xz1">•2016-09-29至2017-09-28</string>
+    <string name="xz2">•有效期内周末，法定节假日可用</string>
+    <string name="xz3">•团购卷使用时间：11:00-14:30,17:00-21:00</string>
+    <string name="xz4">•无需预约，消费高高峰时可能需要等位</string>
+    <string name="xz5">•每张团购卷建议4至6人使用</string>
+    <string name="xz6">•不可使用包间</string>
+    <string name="xz7">•仅限堂食，不提供餐前外带，餐毕未吃完可打包，打包费详情咨询商家</string>
+    <string name="xz8">•团购用户不可同时享受商家其他优惠</string>
+    <string name="xz9">•酒水饮料等问题，请致电商家咨询，以商家反馈为准</string>
+    <string name="xz10">•免费提供WiFi</string>
+    <string name="xz11">•免费提供100个停车位</string>
 
 </resources>
