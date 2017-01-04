@@ -24,6 +24,7 @@ import com.saijie.youka.fn.AddressActivity;
 import com.saijie.youka.fn.FqjcActivity;
 import com.saijie.youka.fn.FriendActivity;
 import com.saijie.youka.fn.LoginActivity;
+import com.saijie.youka.fn.MyordeActivity;
 import com.saijie.youka.fn.SearchActivity;
 import com.saijie.youka.pop.ActionItem;
 import com.saijie.youka.pop.TitlePopup;
@@ -294,6 +295,12 @@ public class MainActivity extends Activity {
 
     public void showDingcan(View view){
         Intent intent = new Intent(MainActivity.this, ReservationActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
+    }
+
+    public void showMyorde(View view){
+        Intent intent = new Intent(MainActivity.this, MyordeActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
         startActivity(intent);
     }

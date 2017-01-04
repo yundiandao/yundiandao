@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="#ffffff" >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,54 +22,60 @@
             android:layout_height="60dp"
             android:layout_marginTop="20dp"
             android:orientation="horizontal">
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:gravity="center"
+                android:id="@+id/filter_1"
                 android:text="及时拍"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/bg_viewfilter"
+                android:background="@drawable/bg_button_filter_select"
+                android:checked="true"
+                android:button="@null"
                 android:textColor="#333333"
                 android:textSize="18sp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.07"/>
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:gravity="center"
                 android:text="会员卡"
-                android:background="@drawable/bg_viewfilter"
+                android:id="@+id/filter_2"
+                android:clickable="true"
+                android:button="@null"
+                android:background="@drawable/bg_button_filter_select"
                 android:textColor="#333333"
                 android:textSize="18sp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.07"/>
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:gravity="center"
                 android:text="团购"
-                android:background="@drawable/bg_viewfilter"
+                android:background="@drawable/bg_button_filter_select"
                 android:textColor="#333333"
                 android:textSize="18sp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.07"/>
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:gravity="center"
                 android:text="促销"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/bg_viewfilter"
+                android:background="@drawable/bg_button_filter_select"
                 android:textColor="#333333"
                 android:textSize="18sp"/>
         </LinearLayout>
@@ -89,54 +96,54 @@
             android:layout_height="60dp"
             android:layout_marginTop="20dp"
             android:orientation="horizontal">
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:gravity="center"
                 android:text="预定"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/bg_viewfilter"
+                android:background="@drawable/bg_button_filter_select"
                 android:textColor="#333333"
                 android:textSize="18sp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.07"/>
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:gravity="center"
                 android:text="排队"
-                android:background="@drawable/bg_viewfilter"
+                android:background="@drawable/bg_button_filter_select"
                 android:textColor="#333333"
                 android:textSize="18sp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.07"/>
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:gravity="center"
                 android:text="点菜"
-                android:background="@drawable/bg_viewfilter"
+                android:background="@drawable/bg_button_filter_select"
                 android:textColor="#333333"
                 android:textSize="18sp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.07"/>
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:gravity="center"
                 android:text="单间"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/bg_viewfilter"
+                android:background="@drawable/bg_button_filter_select"
                 android:textColor="#333333"
                 android:textSize="18sp"/>
         </LinearLayout>
@@ -157,54 +164,54 @@
             android:layout_height="60dp"
             android:layout_marginTop="20dp"
             android:orientation="horizontal">
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:gravity="center"
                 android:text="50以下"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/bg_viewfilter"
+                android:background="@drawable/bg_button_filter_select"
                 android:textColor="#333333"
                 android:textSize="18sp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.07"/>
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:gravity="center"
                 android:text="50-100"
-                android:background="@drawable/bg_viewfilter"
+                android:background="@drawable/bg_button_filter_select"
                 android:textColor="#333333"
                 android:textSize="18sp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.07"/>
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:gravity="center"
                 android:text="100-300"
-                android:background="@drawable/bg_viewfilter"
+                android:background="@drawable/bg_button_filter_select"
                 android:textColor="#333333"
                 android:textSize="18sp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.07"/>
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:gravity="center"
                 android:text="300以上"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/bg_viewfilter"
+                android:background="@drawable/bg_button_filter_select"
                 android:textColor="#333333"
                 android:textSize="18sp"/>
         </LinearLayout>
@@ -225,60 +232,61 @@
             android:layout_height="60dp"
             android:layout_marginTop="20dp"
             android:orientation="horizontal">
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:gravity="center"
                 android:text="新店"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/bg_viewfilter"
+                android:background="@drawable/bg_button_filter_select"
                 android:textColor="#333333"
                 android:textSize="18sp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.07"/>
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:gravity="center"
                 android:text="营业中"
-                android:background="@drawable/bg_viewfilter"
+                android:background="@drawable/bg_button_filter_select"
                 android:textColor="#333333"
                 android:textSize="18sp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.07"/>
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:gravity="center"
                 android:text="有Wi-Fi"
-                android:background="@drawable/bg_viewfilter"
+                android:background="@drawable/bg_button_filter_select"
                 android:textColor="#333333"
                 android:textSize="18sp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.07"/>
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:gravity="center"
                 android:text="可停车"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/bg_viewfilter"
+                android:background="@drawable/bg_button_filter_select"
                 android:textColor="#333333"
                 android:textSize="18sp"/>
         </LinearLayout>
-        
+
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -289,11 +297,12 @@
             android:layout_height="match_parent"
             android:layout_weight="0.45"
             android:text="重置"
+            android:id="@+id/filter_3"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="10dp"
-            android:textColor="#ffffff"
+            android:textColor="@drawable/bg_button_textcolor_filter_select"
             android:clickable="true"
-            android:background="@drawable/bg_button_yzm_select"
+            android:background="@drawable/bg_button_filter_select"
             android:gravity="center"
             android:textSize="18sp"/>
         <TextView
@@ -305,9 +314,10 @@
             android:layout_height="match_parent"
             android:layout_weight="0.45"
             android:text="确定"
-            android:textColor="#ffffff"
+            android:id="@+id/filter_4"
+            android:textColor="@drawable/bg_button_textcolor_filter_select"
             android:clickable="true"
-            android:background="@drawable/bg_button_yzm_select"
+            android:background="@drawable/bg_button_filter_select"
             android:gravity="center"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"

@@ -212,6 +212,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="0.33"
+                    android:clickable="true"
+                    android:onClick="showMyorde"
                     android:orientation="horizontal"
                     >
                         <TextView
