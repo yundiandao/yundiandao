@@ -10,12 +10,12 @@
     <!--头部-->
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="6dp"
-                  android:background="#2bd0af">
+                  android:background="#d04e10">
     </LinearLayout>
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="50dp"
                   android:id="@+id/toptwo"
-                  android:background="#27bea0"
+                  android:background="#fc6013"
                   android:orientation="horizontal">
         <TextView
             android:layout_width="0dp"

@@ -16,7 +16,7 @@
             android:layout_height="match_parent"
             android:text="￥"
             android:textSize="14sp"
-            android:textColor="#27bea0"
+            android:textColor="#fb6010"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:gravity="left|center"/>
@@ -25,7 +25,7 @@
             android:layout_height="match_parent"
             android:text="198"
             android:textSize="30sp"
-            android:textColor="#27bea0"
+            android:textColor="#fb6010"
             android:gravity="left|center"
             />
         <Button

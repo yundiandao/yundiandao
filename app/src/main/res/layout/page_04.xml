@@ -7,8 +7,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="#27bea0"
-            >
+            android:background="#fc6013">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -21,8 +20,6 @@
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="0.2"
-    android:clickable="true"
-    android:onClick="showLogin"
     android:layout_marginTop="20dp"
     android:orientation="horizontal"
     android:background="#ffffff">
@@ -32,6 +29,7 @@
                    android:gravity="center"
                    android:layout_gravity="center"
                    android:src="@mipmap/mypic"
+                   android:onClick="showMyinfo"
                    android:layout_marginLeft="10dp"
                    android:clickable="true"
                    android:contentDescription="@null"/>
@@ -39,7 +37,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-
+            android:clickable="true"
+            android:onClick="showLogin"
             android:orientation="vertical"
             android:layout_marginLeft="10dp">
                 <TextView
@@ -82,6 +81,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.33"
+            android:clickable="true"
+            android:onClick="showMymoney"
             android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -123,6 +124,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.33"
+            android:clickable="true"
+            android:onClick="showMypreferential"
             android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -164,6 +167,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.33"
+            android:clickable="true"
+            android:onClick="showMyintegral"
             android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -243,6 +248,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="0.33"
+                    android:clickable="true"
+                    android:onClick="showMywallet"
                     android:orientation="horizontal">
                         <TextView
                             android:layout_width="0dp"

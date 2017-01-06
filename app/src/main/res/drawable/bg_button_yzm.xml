@@ -3,7 +3,7 @@
 <!-- 在描边里面设置了dash参数，使得图形的边变成了虚线 <stroke   android:dashGap="3dp"  android:dashWidth="5dp"  android:color="#dcdcdc" />  -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     >
-    <solid android:color="#96e4da" />
+    <solid android:color="#fba87e" />
 
     <stroke android:width="0dip" android:color="#ededed" />
 

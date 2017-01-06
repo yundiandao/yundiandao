@@ -8,7 +8,7 @@
 	<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="50dp"
-			android:background="#27bea0"
+			android:background="#fc6013"
 			android:orientation="horizontal"
 		>
 
@@ -90,6 +90,8 @@ android:layout_height="fill_parent">
 					android:layout_height="wrap_content"
 					android:layout_weight="0.3"
 					android:text="外卖"
+					android:clickable="true"
+					android:onClick="showDeliver"
 					android:textSize="16sp"
 					android:gravity="center"
 					android:drawableTop="@mipmap/wm"
@@ -482,16 +484,16 @@ android:layout_height="fill_parent">
 								 	       android:layout_weight="0.5"
 								 	       android:text="￥298"
 								 	       android:textSize="18sp"
-								 	       android:textColor="#27bea0"
+								 	       android:textColor="#fe6016"
 								 	       android:contentDescription="@null"/>
 								 	        <TextView   android:layout_width="0dp"
 								 	       android:layout_height="wrap_content"
 								 	       android:layout_weight="0.5"
 								 	       android:layout_marginLeft="10dp"
 								 	       android:text="￥387"
+										   android:id="@+id/tv387"
 								 	       android:textSize="14sp"
-								 	       android:textColor="#737373"
-								 	       android:contentDescription="@null"/>
+								 	       android:textColor="#737373"/>
 							</LinearLayout>
 						        </LinearLayout>
 							 <LinearLayout
@@ -573,7 +575,7 @@ android:layout_height="fill_parent">
 					android:layout_weight="0.5"
 					android:text="￥298"
 					android:textSize="18sp"
-					android:textColor="#27bea0"
+					android:textColor="#fe6016"
 					android:contentDescription="@null"/>
 				<TextView   android:layout_width="0dp"
 					android:layout_height="wrap_content"

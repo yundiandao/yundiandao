@@ -3,9 +3,9 @@
 <!-- 在描边里面设置了dash参数，使得图形的边变成了虚线 <stroke   android:dashGap="3dp"  android:dashWidth="5dp"  android:color="#dcdcdc" />  -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     >
-    <solid android:color="#27bea0" />
+    <solid android:color="#fc6013" />
 
-    <stroke android:width="1.5dip" android:color="#27bea0" />
+    <stroke android:width="1.5dip" android:color="#fc6013" />
 
     <corners
         android:bottomLeftRadius="6dp"

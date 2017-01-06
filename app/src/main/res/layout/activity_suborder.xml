@@ -10,12 +10,12 @@
     <!--头部-->
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="6dp"
-                  android:background="#2bd0af">
+                  android:background="#d04e10">
     </LinearLayout>
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="50dp"
                   android:id="@+id/toptwo"
-                  android:background="#27bea0"
+                  android:background="#fc6013"
                   android:orientation="horizontal">
         <TextView
             android:layout_width="0dp"
@@ -186,7 +186,7 @@
                 android:layout_weight="0.3"
                 android:text="￥198"
                 android:textSize="16sp"
-                android:textColor="#27bea0"
+                android:textColor="#fd6013"
                 android:gravity="center|right"
                 android:layout_marginRight="10dp"
                 />
@@ -251,7 +251,7 @@
             android:layout_height="match_parent"
             android:text="随时退"
             android:layout_marginLeft="5dp"
-            android:textColor="#27bea0"
+            android:textColor="#fd6013"
             android:textSize="16sp"
             android:gravity="center"/>
         <ImageView
@@ -265,7 +265,7 @@
             android:layout_height="match_parent"
             android:text="过期退"
             android:layout_marginLeft="5dp"
-            android:textColor="#27bea0"
+            android:textColor="#fd6013"
             android:textSize="16sp"
             android:gravity="center"/>
         <ImageView
@@ -279,7 +279,7 @@
             android:layout_height="match_parent"
             android:text="免预约"
             android:layout_marginLeft="5dp"
-            android:textColor="#27bea0"
+            android:textColor="#fd6013"
             android:textSize="16sp"
             android:gravity="center"/>
     </LinearLayout>

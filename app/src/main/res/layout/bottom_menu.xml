@@ -43,7 +43,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/index" 
-                        android:textColor="#51C650"
+                        android:textColor="#fe5e12"
                         android:textSize="12sp" /> 
                     <TextView android:id="@+id/index_text_normal"
                         android:layout_width="wrap_content"
@@ -83,7 +83,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/find" 
-                        android:textColor="#51C650"
+                        android:textColor="#fe5e12"
                         android:textSize="12sp"  /> 
                     <TextView android:id="@+id/find_text_normal"
                         android:layout_width="wrap_content"
@@ -122,7 +122,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/my" 
-                        android:textColor="#51C650"
+                        android:textColor="#fe5e12"
                         android:textSize="12sp"/> 
                     <TextView  android:id="@+id/me_text_normal"
                         android:layout_width="wrap_content"

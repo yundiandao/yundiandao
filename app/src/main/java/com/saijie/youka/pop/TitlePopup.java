@@ -134,7 +134,7 @@ public class TitlePopup extends PopupWindow {
 	private void populateActions() {
 		mIsDirty = false;
 
-		// 设置列表的适配器
+		// 设置列表的适配器   ---列表内容样式
 		mListView.setAdapter(new BaseAdapter() {
 			@Override
 			public View getView(int position, View convertView, ViewGroup parent) {
@@ -144,12 +144,12 @@ public class TitlePopup extends PopupWindow {
 				}
 				TextView textView = ViewHolder.get(convertView, R.id.txt_title);
 				textView.setTextColor(mContext.getResources().getColor(
-						android.R.color.white));
+						android.R.color.black));
 				textView.setTextSize(16);
 				// 设置文本居中
 				 textView.setGravity(Gravity.CENTER_VERTICAL);
 				// // 设置文本域的范围
-				// textView.setPadding(0, 10, 0, 10);
+				 textView.setPadding(10, 10, 0, 10);
 				// 设置文本在一行内显示（不换行）
 				textView.setSingleLine(true);
 
@@ -159,7 +159,7 @@ public class TitlePopup extends PopupWindow {
 				textView.setText(item.mTitle);
 				if (item.mDrawable != null) {
 					// 设置文字与图标的间隔
-					textView.setCompoundDrawablePadding(10);
+					textView.setCompoundDrawablePadding(30);
 					// 设置在文字的左边放一个图标
 					textView.setCompoundDrawablesWithIntrinsicBounds(
 							item.mDrawable, null, null, null);

@@ -9,12 +9,12 @@
     <!--头部-->
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="6dp"
-                  android:background="#2bd0af">
+                  android:background="#d04e10">
     </LinearLayout>
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="50dp"
                   android:id="@+id/toptwo"
-                  android:background="#27bea0"
+                  android:background="#fc6013"
                   android:orientation="horizontal">
     <TextView
         android:layout_width="0dp"
@@ -49,7 +49,7 @@
             android:text="1输入手机号"
             android:layout_marginLeft="10dp"
             android:gravity="center"
-            android:textColor="#27bea0"
+            android:textColor="#fc6013"
             android:textSize="18sp"/>
         <TextView
             android:layout_width="0dp"
@@ -147,7 +147,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="《云点道服务协议》"
-            android:textColor="#27bea0"
+            android:textColor="#fc6013"
             android:textSize="18sp"/>
     </LinearLayout>
 

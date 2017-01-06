@@ -25,7 +25,6 @@ public class QrCodePopupMenu extends PopupWindow implements OnClickListener{
 
 	private Activity activity;
 	private View popView;
-	
 	private View v_item1;
 	private View v_item2;
 	

@@ -1,7 +1,6 @@
 package com.saijie.youka.adapter;
 
 import java.util.List;
-
 import com.saijie.youka.R;
 
 import android.content.Context;
@@ -13,6 +12,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
 
 
 public class TextAdapter extends ArrayAdapter<String> {

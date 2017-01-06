@@ -6,12 +6,12 @@
               android:orientation="vertical">
         <LinearLayout android:layout_width="fill_parent"
                       android:layout_height="6dp"
-                      android:background="#2bd0af">
+                      android:background="#d04e10">
         </LinearLayout>
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="50dp"
                       android:id="@+id/topone"
-                      android:background="#27bea0"
+                      android:background="#fc6013"
                       android:orientation="horizontal">
             <TextView
                 android:layout_width="100dp"
@@ -167,7 +167,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.7"
                     android:text="离我最近"
-                    android:textColor="#27bea0"
+                    android:textColor="#fc6111"
                     android:textSize="16sp"
                     />
             </LinearLayout>

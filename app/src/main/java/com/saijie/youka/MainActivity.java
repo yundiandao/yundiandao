@@ -8,6 +8,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.StrikethroughSpan;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -24,12 +27,18 @@ import com.saijie.youka.fn.AddressActivity;
 import com.saijie.youka.fn.FqjcActivity;
 import com.saijie.youka.fn.FriendActivity;
 import com.saijie.youka.fn.LoginActivity;
+import com.saijie.youka.fn.MyinfoActivity;
+import com.saijie.youka.fn.MyintegralActivity;
+import com.saijie.youka.fn.MymoneyActivity;
 import com.saijie.youka.fn.MyordeActivity;
+import com.saijie.youka.fn.MypreferentialActivity;
+import com.saijie.youka.fn.MywalletActivity;
 import com.saijie.youka.fn.SearchActivity;
 import com.saijie.youka.pop.ActionItem;
 import com.saijie.youka.pop.TitlePopup;
 import com.saijie.youka.pop.TitlePopup.OnItemOnClickListener;
 import com.saijie.youka.qr.CaptureActivity;
+import com.saijie.youka.reservation.DeliverActivity;
 import com.saijie.youka.reservation.ReservationActivity;
 
 import java.util.ArrayList;
@@ -80,7 +89,12 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+//		TextView textView  = (TextView)findViewById(R.id.tv387);
+//		String string = "￥387";
+//		SpannableString sp = new SpannableString(string);
+//		sp.setSpan(new StrikethroughSpan(), 0, string.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//		textView.setText(sp);
+//		textView.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
 
         // 初始化控件
         initView();
@@ -267,7 +281,6 @@ public class MainActivity extends Activity {
         }
     }
 
-
     public void showSearch(View view){
         Intent intent = new Intent(MainActivity.this, SearchActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
@@ -298,13 +311,48 @@ public class MainActivity extends Activity {
         intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
         startActivity(intent);
     }
-
+//我的订单
     public void showMyorde(View view){
         Intent intent = new Intent(MainActivity.this, MyordeActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
         startActivity(intent);
     }
-
+//我的钱包
+    public void showMywallet(View view){
+        Intent intent = new Intent(MainActivity.this, MywalletActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
+    }
+//个人信息
+    public void showMyinfo(View view){
+        Intent intent = new Intent(MainActivity.this, MyinfoActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
+    }
+//外卖
+    public void showDeliver(View view){
+        Intent intent = new Intent(MainActivity.this, DeliverActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
+    }
+//我的余额
+	public void showMymoney(View view){
+		Intent intent = new Intent(MainActivity.this, MymoneyActivity.class);
+		intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+		startActivity(intent);
+	}
+//我的优惠券
+	public void showMypreferential(View view){
+		Intent intent = new Intent(MainActivity.this, MypreferentialActivity.class);
+		intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+		startActivity(intent);
+	}
+//我的积分
+	public void showMyintegral(View view){
+		Intent intent = new Intent(MainActivity.this, MyintegralActivity.class);
+		intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+		startActivity(intent);
+	}
 
 
 

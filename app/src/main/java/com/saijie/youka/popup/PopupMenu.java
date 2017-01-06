@@ -20,6 +20,7 @@ import com.saijie.youka.qr.CaptureActivity;
  * 
  * @描述: PopupMenu 弹出菜单
  * @time 2016年12月7日09:02:52
+ * 弃掉，改用pop--》TitlePopup
  * @version 0.0.1
  */
 @SuppressLint("InflateParams")
