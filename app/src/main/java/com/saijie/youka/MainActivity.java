@@ -8,9 +8,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.style.StrikethroughSpan;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -26,7 +23,10 @@ import com.saijie.youka.details.SellerActivity;
 import com.saijie.youka.fn.AddressActivity;
 import com.saijie.youka.fn.FqjcActivity;
 import com.saijie.youka.fn.FriendActivity;
+import com.saijie.youka.fn.JspActivity;
 import com.saijie.youka.fn.LoginActivity;
+import com.saijie.youka.fn.MyaddressActivity;
+import com.saijie.youka.fn.MyexchangeActivity;
 import com.saijie.youka.fn.MyinfoActivity;
 import com.saijie.youka.fn.MyintegralActivity;
 import com.saijie.youka.fn.MymoneyActivity;
@@ -280,34 +280,49 @@ public class MainActivity extends Activity {
             viewPager.setCurrentItem(ME_INDEX, false);
         }
     }
+//及时拍
+    public void showJsp(View view){
+        Intent intent = new Intent(MainActivity.this, JspActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
 
+    }
+//搜索
     public void showSearch(View view){
         Intent intent = new Intent(MainActivity.this, SearchActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
         startActivity(intent);
 
     }
+//地址
     public void showAddress(View view){
          Intent intent = new Intent(MainActivity.this, AddressActivity.class);
          intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
          startActivity(intent);
 
     }
+//商户详细
     public void showJingu(View view){
         Intent intent = new Intent(MainActivity.this, SellerActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
         startActivity(intent);
 
     }
-
+//登陆页
     public void showLogin(View view){
         Intent intent = new Intent(MainActivity.this, LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
         startActivity(intent);
     }
-
+//订餐
     public void showDingcan(View view){
         Intent intent = new Intent(MainActivity.this, ReservationActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
+    }
+//外卖
+    public void showDeliver(View view){
+        Intent intent = new Intent(MainActivity.this, DeliverActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
         startActivity(intent);
     }
@@ -329,12 +344,6 @@ public class MainActivity extends Activity {
         intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
         startActivity(intent);
     }
-//外卖
-    public void showDeliver(View view){
-        Intent intent = new Intent(MainActivity.this, DeliverActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
-        startActivity(intent);
-    }
 //我的余额
 	public void showMymoney(View view){
 		Intent intent = new Intent(MainActivity.this, MymoneyActivity.class);
@@ -348,11 +357,23 @@ public class MainActivity extends Activity {
 		startActivity(intent);
 	}
 //我的积分
-	public void showMyintegral(View view){
-		Intent intent = new Intent(MainActivity.this, MyintegralActivity.class);
-		intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
-		startActivity(intent);
-	}
+    public void showMyintegral(View view){
+        Intent intent = new Intent(MainActivity.this, MyintegralActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
+    }
+//积分兑换
+    public void showMyexchange(View view){
+        Intent intent = new Intent(MainActivity.this, MyexchangeActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
+    }
+//收货地址
+    public void showMyaddress(View view){
+        Intent intent = new Intent(MainActivity.this, MyaddressActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
+    }
 
 
 

@@ -92,6 +92,12 @@
         </activity>
         <activity android:name=".fn.MyintegralActivity">
         </activity>
+        <activity android:name=".fn.MyexchangeActivity">
+        </activity>
+        <activity android:name=".fn.MyaddressActivity">
+        </activity>
+        <activity android:name=".fn.JspActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -67,10 +67,8 @@ public class TitlePopup extends PopupWindow {
 		setTouchable(true);
 		// 设置弹窗外可点击
 		setOutsideTouchable(true);
-
 		// 获得屏幕的宽度和高度
-		WindowManager wm = (WindowManager) context
-				.getSystemService(Context.WINDOW_SERVICE);
+		WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
 		mScreenWidth = wm.getDefaultDisplay().getWidth();
 		mScreenHeight = wm.getDefaultDisplay().getHeight();
 
@@ -101,8 +99,7 @@ public class TitlePopup extends PopupWindow {
 				dismiss();
 
 				if (mItemOnClickListener != null)
-					mItemOnClickListener.onItemClick(mActionItems.get(index),
-							index);
+					mItemOnClickListener.onItemClick(mActionItems.get(index), index);
 			}
 		});
 	}
@@ -115,8 +112,7 @@ public class TitlePopup extends PopupWindow {
 		view.getLocationOnScreen(mLocation);
 
 		// 设置矩形的大小
-		mRect.set(mLocation[0], mLocation[1], mLocation[0] + view.getWidth(),
-				mLocation[1] + view.getHeight());
+		mRect.set(mLocation[0], mLocation[1], mLocation[0] + view.getWidth(), mLocation[1] + view.getHeight());
 
 		// 判断是否需要添加或更新列表子类项
 		if (mIsDirty) {
@@ -124,8 +120,7 @@ public class TitlePopup extends PopupWindow {
 		}
 
 		// 显示弹窗的位置
-		showAtLocation(view, popupGravity, mScreenWidth - LIST_PADDING
-				- (getWidth() / 2), mRect.bottom);
+		showAtLocation(view, popupGravity, mScreenWidth - LIST_PADDING - (getWidth() / 2), mRect.bottom);
 	}
 
 	/**
@@ -134,7 +129,7 @@ public class TitlePopup extends PopupWindow {
 	private void populateActions() {
 		mIsDirty = false;
 
-		// 设置列表的适配器   ---列表内容样式
+		// 设置列表的适配器   ---列表内容样式  @mipmap-->popmenu_bg
 		mListView.setAdapter(new BaseAdapter() {
 			@Override
 			public View getView(int position, View convertView, ViewGroup parent) {
@@ -143,9 +138,8 @@ public class TitlePopup extends PopupWindow {
 							R.layout.layout_item_pop, parent, false);
 				}
 				TextView textView = ViewHolder.get(convertView, R.id.txt_title);
-				textView.setTextColor(mContext.getResources().getColor(
-						android.R.color.black));
-				textView.setTextSize(16);
+				textView.setTextColor(mContext.getResources().getColor(android.R.color.black));
+				textView.setTextSize(18);
 				// 设置文本居中
 				 textView.setGravity(Gravity.CENTER_VERTICAL);
 				// // 设置文本域的范围

@@ -313,6 +313,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="0.33"
+                    android:clickable="true"
+                    android:onClick="showMyexchange"
                     android:orientation="horizontal"
                     >
                         <TextView
@@ -342,6 +344,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="0.33"
+                    android:clickable="true"
+                    android:onClick="showMyaddress"
                     android:orientation="horizontal">
                         <TextView
                             android:layout_width="0dp"
