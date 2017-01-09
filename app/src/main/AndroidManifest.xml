@@ -62,41 +62,73 @@
             android:name=".fn.LoginActivity"
             android:label="@android:style/Theme.NoTitleBar">
         </activity>
-        <activity android:name=".fn.RegisterActivity">
+        <activity
+            android:name=".fn.RegisterActivity"
+            android:label="@android:style/Theme.NoTitleBar">
         </activity>
-        <activity android:name=".fn.YzmActivity">
+        <activity
+            android:name=".fn.YzmActivity"
+            android:label="@android:style/Theme.NoTitleBar">
         </activity>
-        <activity android:name=".fn.SzmmActivity">
+        <activity
+            android:name=".fn.SzmmActivity"
+            android:label="@android:style/Theme.NoTitleBar">
         </activity>
-        <activity android:name=".details.SuborderActivity">
+        <activity
+            android:name=".details.SuborderActivity"
+            android:label="@android:style/Theme.NoTitleBar">
         </activity>
-        <activity android:name=".details.PayorderActivity">
+        <activity
+            android:name=".details.PayorderActivity"
+            android:label="@android:style/Theme.NoTitleBar">
         </activity>
-        <activity android:name=".reservation.ReservationActivity">
+        <activity
+            android:name=".reservation.ReservationActivity"
+            android:label="@android:style/Theme.NoTitleBar">
         </activity>
-        <activity android:name=".reservation2.Reservation2Activity">
+        <activity
+            android:name=".fn.FriendActivity"
+            android:label="@android:style/Theme.NoTitleBar">
         </activity>
-        <activity android:name=".fn.FriendActivity">
+        <activity
+            android:name=".fn.MyordeActivity"
+            android:label="@android:style/Theme.NoTitleBar">
         </activity>
-        <activity android:name=".fn.MyordeActivity">
+        <activity
+            android:name=".fn.MywalletActivity"
+            android:label="@android:style/Theme.NoTitleBar">
         </activity>
-        <activity android:name=".fn.MywalletActivity">
+        <activity
+            android:name=".fn.MyinfoActivity"
+            android:label="@android:style/Theme.NoTitleBar">
         </activity>
-        <activity android:name=".fn.MyinfoActivity">
+        <activity
+            android:name=".reservation.DeliverActivity"
+            android:label="@android:style/Theme.NoTitleBar">
         </activity>
-        <activity android:name=".reservation.DeliverActivity">
+        <activity
+            android:name=".fn.MymoneyActivity"
+            android:label="@android:style/Theme.NoTitleBar">
         </activity>
-        <activity android:name=".fn.MymoneyActivity">
+        <activity
+            android:name=".fn.MypreferentialActivity"
+            android:label="@android:style/Theme.NoTitleBar">
         </activity>
-        <activity android:name=".fn.MypreferentialActivity">
+        <activity
+            android:name=".fn.MyintegralActivity"
+            android:label="@android:style/Theme.NoTitleBar">
         </activity>
-        <activity android:name=".fn.MyintegralActivity">
+        <activity
+            android:name=".fn.MyexchangeActivity"
+            android:label="@android:style/Theme.NoTitleBar">
         </activity>
-        <activity android:name=".fn.MyexchangeActivity">
+        <activity
+            android:name=".fn.MyaddressActivity"
+            android:label="@android:style/Theme.NoTitleBar">
         </activity>
-        <activity android:name=".fn.MyaddressActivity">
-        </activity>
-        <activity android:name=".fn.JspActivity">
+        <activity
+            android:name=".fn.JshipaiActivity"
+            android:label="@android:style/Theme.NoTitleBar">
         </activity>
     </application>
 
