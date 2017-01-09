@@ -2,4 +2,33 @@
 <resources>
     <color name="transparent_background_button">#11000000</color>
     <color name="transparent_background">#FFFFFF</color>
+
+    <!-- 白色 -->
+    <color name="white">#ffffff</color>
+    <!--黑色-->
+    <color name="black">#1e1d1d</color>
+    <!-- 透明 -->
+    <color name="transparent">#00000000</color>
+
+
+    <color name="press">#fd6011</color>
+
+    <color name="select_textview_f">#999999</color>
+    <color name="select_textview_t">#fd6011</color>
+
+    <!--reservation-->
+    <color name="popup_main_background">#b0000000</color>
+    <color name="choose_eara_item_press_color">#f4f4f4</color>
+    <color name="no_color">#00000000</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="filter_select">#27bea0</color>
+
+
+
+
+
 </resources>

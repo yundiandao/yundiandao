@@ -13,21 +13,43 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.saijie.youka.base.ContentAdapter;
+import com.saijie.youka.details.SellerActivity;
 import com.saijie.youka.fn.AddressActivity;
+import com.saijie.youka.fn.FqjcActivity;
+import com.saijie.youka.fn.FriendActivity;
+import com.saijie.youka.fn.JspActivity;
+import com.saijie.youka.fn.LoginActivity;
+import com.saijie.youka.fn.MyaddressActivity;
+import com.saijie.youka.fn.MyexchangeActivity;
+import com.saijie.youka.fn.MyinfoActivity;
+import com.saijie.youka.fn.MyintegralActivity;
+import com.saijie.youka.fn.MymoneyActivity;
+import com.saijie.youka.fn.MyordeActivity;
+import com.saijie.youka.fn.MypreferentialActivity;
+import com.saijie.youka.fn.MywalletActivity;
 import com.saijie.youka.fn.SearchActivity;
-import com.saijie.youka.popup.PopupMenu;
+import com.saijie.youka.pop.ActionItem;
+import com.saijie.youka.pop.TitlePopup;
+import com.saijie.youka.pop.TitlePopup.OnItemOnClickListener;
+import com.saijie.youka.qr.CaptureActivity;
+import com.saijie.youka.reservation.DeliverActivity;
+import com.saijie.youka.reservation.ReservationActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends Activity {
 
-    private ImageView menu_icon;
-    private PopupMenu popupMenu;
+  //  private ImageView menu_icon;
+  //  private PopupMenu popupMenu;
+      private TitlePopup titlePopup;
+
 
 
     // 布局集合 实现主界面的左右滑动效果
@@ -60,23 +82,89 @@ public class MainActivity extends Activity {
     private final int ME_INDEX = 2; // 我的菜单索引
     private int curIndex; // 当前菜单索引
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//		TextView textView  = (TextView)findViewById(R.id.tv387);
+//		String string = "￥387";
+//		SpannableString sp = new SpannableString(string);
+//		sp.setSpan(new StrikethroughSpan(), 0, string.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//		textView.setText(sp);
+//		textView.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
+
         // 初始化控件
         initView();
-        //实现右上角弹出菜单
-        popupMenu = new PopupMenu(this);
-        menu_icon = (ImageView) findViewById(R.id.menu_icon);
-        menu_icon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                popupMenu.showLocation(R.id.menu_icon);//设置弹出菜单弹出的位置
-            }
-        });
 
+        //右上角二级菜单
+        inint();
+        /** // 实现右上角弹出菜单---弃用（因为出现Null Object ImageView OnClickListener）
+          popupMenu = new PopupMenu(this);
+          menu_icon = (ImageView) findViewById(R.id.menu_icon);
+          menu_icon.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v){
+               popupMenu.showLocation(R.id.menu_icon);//设置弹出菜单弹出的位置
+           }
+        });
+       */
     }
+    /**            二级菜单----Start                        */
+    public void showPop(View v) {
+        titlePopup.show(findViewById(R.id.iv_show_Pop));
+    }
+    private void inint() {
+        // 实例化标题栏弹窗
+        titlePopup = new TitlePopup(this, LayoutParams.WRAP_CONTENT,
+                LayoutParams.WRAP_CONTENT);
+        titlePopup.setItemOnClickListener(onitemClick);
+        // 给标题栏弹窗添加子类
+        titlePopup.addAction(new ActionItem(this, R.string.groupchat,
+                R.mipmap.icon_menu_group));
+        titlePopup.addAction(new ActionItem(this, R.string.addfriend,
+                R.mipmap.icon_menu_addfriend));
+        titlePopup.addAction(new ActionItem(this, R.string.qrcode,
+                R.mipmap.icon_menu_sao));
+        titlePopup.addAction(new ActionItem(this, R.string.money,
+                R.mipmap.abv));
+    }
+    private OnItemOnClickListener onitemClick = new OnItemOnClickListener() {
+        @Override
+        public void onItemClick(ActionItem item, int position) {
+            // mLoadingDialog.show();
+            switch (position) {
+                case 0:// 发起群聊
+                    Toast.makeText(MainActivity.this, "发起聚餐",1).show();
+                    Intent intent = new Intent(MainActivity.this, FqjcActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+                    startActivity(intent);
+                    break;
+                case 1:// 添加老友
+                    Toast.makeText(MainActivity.this, " 添加老友",1).show();
+                    intent = new Intent(MainActivity.this, FriendActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+                    startActivity(intent);
+                    break;
+                case 2:// 扫一扫
+                    Toast.makeText(MainActivity.this, "扫一扫",1).show();
+                    intent = new Intent(MainActivity.this, CaptureActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+                    startActivity(intent);
+
+                    break;
+                case 3:// 关于与帮助
+                    Toast.makeText(MainActivity.this, "关于与帮助",1).show();
+                    break;
+                default:
+                    break;
+            }
+        }
+    };
+    /**            二级菜单----End                        */
+
 
     //实现主界面的左右滑动效果
     @SuppressLint("InflateParams")
@@ -192,20 +280,101 @@ public class MainActivity extends Activity {
             viewPager.setCurrentItem(ME_INDEX, false);
         }
     }
+//及时拍
+    public void showJsp(View view){
+        Intent intent = new Intent(MainActivity.this, JspActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
 
-
+    }
+//搜索
     public void showSearch(View view){
         Intent intent = new Intent(MainActivity.this, SearchActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
         startActivity(intent);
 
     }
+//地址
     public void showAddress(View view){
          Intent intent = new Intent(MainActivity.this, AddressActivity.class);
          intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
          startActivity(intent);
 
     }
+//商户详细
+    public void showJingu(View view){
+        Intent intent = new Intent(MainActivity.this, SellerActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
+
+    }
+//登陆页
+    public void showLogin(View view){
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
+    }
+//订餐
+    public void showDingcan(View view){
+        Intent intent = new Intent(MainActivity.this, ReservationActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
+    }
+//外卖
+    public void showDeliver(View view){
+        Intent intent = new Intent(MainActivity.this, DeliverActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
+    }
+//我的订单
+    public void showMyorde(View view){
+        Intent intent = new Intent(MainActivity.this, MyordeActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
+    }
+//我的钱包
+    public void showMywallet(View view){
+        Intent intent = new Intent(MainActivity.this, MywalletActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
+    }
+//个人信息
+    public void showMyinfo(View view){
+        Intent intent = new Intent(MainActivity.this, MyinfoActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
+    }
+//我的余额
+	public void showMymoney(View view){
+		Intent intent = new Intent(MainActivity.this, MymoneyActivity.class);
+		intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+		startActivity(intent);
+	}
+//我的优惠券
+	public void showMypreferential(View view){
+		Intent intent = new Intent(MainActivity.this, MypreferentialActivity.class);
+		intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+		startActivity(intent);
+	}
+//我的积分
+    public void showMyintegral(View view){
+        Intent intent = new Intent(MainActivity.this, MyintegralActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
+    }
+//积分兑换
+    public void showMyexchange(View view){
+        Intent intent = new Intent(MainActivity.this, MyexchangeActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
+    }
+//收货地址
+    public void showMyaddress(View view){
+        Intent intent = new Intent(MainActivity.this, MyaddressActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        startActivity(intent);
+    }
+
 
 
     //防止自己写的应用程序不小心点击退出键而直接退出
@@ -263,10 +432,6 @@ public class MainActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-
-
-
 
 
 

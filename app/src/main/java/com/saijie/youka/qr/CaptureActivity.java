@@ -48,6 +48,7 @@ import java.lang.reflect.Field;
 /**
  *
  * @描述: CaptureActivity 二维码扫描时控制器
+ *  top_centent.xml
  * @time 2016年12月7日10:10:50
  * @version 0.0.1
  */
@@ -79,6 +80,7 @@ public final class CaptureActivity extends BaseActivity implements OnClickListen
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
 
 		Window window = getWindow();
 		window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);

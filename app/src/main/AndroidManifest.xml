@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.saijie.youka">
+          package="com.saijie.youka">
 
-    <uses-sdk android:minSdkVersion="15" />
+    <uses-sdk android:minSdkVersion="15"/>
 
     <!-- 二维码獲取权限 Start -->
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
-    <uses-permission android:name="android.permission.FLASHLIGHT" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
-    <!-- 二维码獲取权限 End -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
 
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- 二维码獲取权限 End -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,31 +28,76 @@
             android:name=".MainActivity"
             android:theme="@android:style/Theme.NoTitleBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-
+            android:value="@integer/google_play_services_version"/>
         <!-- <扫描二维码 界面 -->
         <activity
             android:name=".qr.CaptureActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar" />
+            android:theme="@android:style/Theme.Black.NoTitleBar"/>
         <!-- 扫描二维码 结果界面 -->
         <activity
             android:name=".qr.ResultActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar" />
+            android:theme="@android:style/Theme.Black.NoTitleBar"/>
         <activity
             android:name=".fn.SearchActivity"
-            android:label="@string/title_activity_search"
-           />
-        <activity android:name=".fn.AddressActivity"
-             />
-        <activity android:name=".fn.FqjcActivity" />
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".fn.AddressActivity"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".fn.FqjcActivity"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".details.SellerActivity"
+            android:label="@android:style/Theme.NoTitleBar">
+        </activity>
+        <activity
+            android:name=".fn.LoginActivity"
+            android:label="@android:style/Theme.NoTitleBar">
+        </activity>
+        <activity android:name=".fn.RegisterActivity">
+        </activity>
+        <activity android:name=".fn.YzmActivity">
+        </activity>
+        <activity android:name=".fn.SzmmActivity">
+        </activity>
+        <activity android:name=".details.SuborderActivity">
+        </activity>
+        <activity android:name=".details.PayorderActivity">
+        </activity>
+        <activity android:name=".reservation.ReservationActivity">
+        </activity>
+        <activity android:name=".reservation2.Reservation2Activity">
+        </activity>
+        <activity android:name=".fn.FriendActivity">
+        </activity>
+        <activity android:name=".fn.MyordeActivity">
+        </activity>
+        <activity android:name=".fn.MywalletActivity">
+        </activity>
+        <activity android:name=".fn.MyinfoActivity">
+        </activity>
+        <activity android:name=".reservation.DeliverActivity">
+        </activity>
+        <activity android:name=".fn.MymoneyActivity">
+        </activity>
+        <activity android:name=".fn.MypreferentialActivity">
+        </activity>
+        <activity android:name=".fn.MyintegralActivity">
+        </activity>
+        <activity android:name=".fn.MyexchangeActivity">
+        </activity>
+        <activity android:name=".fn.MyaddressActivity">
+        </activity>
+        <activity android:name=".fn.JspActivity">
+        </activity>
     </application>
 
 </manifest>
