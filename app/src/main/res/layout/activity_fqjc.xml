@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.3"
+    android:text="发起聚餐"
+    android:gravity="center"
+    android:textSize="20sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:text=" 发起聚餐 功能---点击之后，新打开页面，获取手机通讯录，点选联系人，自动生成短信内容（今天'时间'预定在'酒店名，桌号'发起'活动名，聚餐名'，'发起人'----优卡科技，更关注本地生活）"
+        android:gravity="center"
+        android:textSize="14sp"/>
+
+
+</LinearLayout>

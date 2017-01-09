@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <!-- Messages IDs -->
+  <item type="id" name="decode"/>
+  <item type="id" name="decode_failed"/>
+  <item type="id" name="decode_succeeded"/>
+  <item type="id" name="quit"/>
+  <item type="id" name="restart_preview"/>
+  <item type="id" name="return_scan_result"/>
+  <item type="id" name="selected_view"/>
+
+  <item type="id" name="rakethrough"/>
+
+  <item type="id" name="sousuo"/>
+
+  <item type="id" name="v1"/>
+  <item type="id" name="v2"/>
+  <item type="id" name="v3"/>
+  <item type="id" name="v4"/>
+
+  <item type="id" name="t1"/>
+  <item type="id" name="t2"/>
+  <item type="id" name="t3"/>
+  <item type="id" name="t4"/>
+
+
+</resources>

@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="slidingmenu_offset">80dp</dimen>
+    <dimen name="shadow_width">0dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="hs">50dp</dimen>
+
+
+    <!-- reservation -->
+    <dimen name="button_text_size">14sp</dimen>
+    <dimen name="expand_tab_item_height">45dp</dimen>
+    <dimen name="expand_tab_eara_height">380dp</dimen>
+    <dimen name="head_bar_height">45dp</dimen>
+
+</resources>

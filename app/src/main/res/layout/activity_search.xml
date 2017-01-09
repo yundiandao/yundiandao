@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    >
+
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="#d04e10">
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fc6013"
+        android:orientation="horizontal">
+        <ImageView android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:src="@mipmap/back"
+            android:onClick="goback"
+            android:clickable="true"
+            android:layout_marginTop="10dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:contentDescription="@null"/>
+
+        <LinearLayout android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText  android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:id="@+id/address"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:hint="@string/search"
+                    android:drawableLeft="@mipmap/search2"
+                    android:textSize="16sp"
+                    android:textColor="#a1a1a1"
+                    android:background="@drawable/bg_search_sousuo"
+                    android:layout_marginTop="8dp" />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.12"
+            android:id="@id/sousuo"
+            android:clickable="true"
+            android:onClick="showSousuo"
+            android:text="搜索"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="#ededed"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ededed"
+        android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="热门搜索"
+                android:textColor="#808080"
+                android:textSize="18sp"/>
+        <View android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:background="#ededed" />
+        <View android:layout_width="fill_parent"
+            android:layout_height="15dp"
+            android:background="#ffffff" />
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:layout_gravity="left">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="程铭快餐"
+                android:background="@drawable/bg_search_white"
+                android:textSize="16sp"
+                android:textColor="#333333"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="爱心快餐"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/bg_search_white"
+                android:textSize="16sp"
+                android:textColor="#333333"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大唐饭庄"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/bg_search_white"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+        <View android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:background="#ffffff" />
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="宁宇前十店"
+                android:background="@drawable/bg_search_white"
+                android:textSize="16sp"
+                android:textColor="#333333"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="玲珑活馅蒸饺"
+                android:background="@drawable/bg_search_white"
+                android:textSize="16sp"
+                android:textColor="#333333"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="金龟馅饼"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/bg_search_white"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+        <View android:layout_width="fill_parent"
+            android:layout_height="15dp"
+            android:background="#ffffff" />
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ededed"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="推荐搜索"
+            android:textColor="#808080"
+            android:textSize="18sp"/>
+        <View android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:background="#ededed" />
+        <View android:layout_width="fill_parent"
+            android:layout_height="15dp"
+            android:background="#ffffff" />
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:layout_gravity="left">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="程铭快餐"
+                android:background="@drawable/bg_search_white"
+                android:textSize="16sp"
+                android:textColor="#333333"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="爱心快餐"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/bg_search_white"
+                android:textSize="16sp"
+                android:textColor="#333333"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大唐饭庄"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/bg_search_white"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+        <View android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:background="#ffffff" />
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="宁宇前十店"
+                android:background="@drawable/bg_search_white"
+                android:textSize="16sp"
+                android:textColor="#333333"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="玲珑活馅蒸饺"
+                android:background="@drawable/bg_search_white"
+                android:textSize="16sp"
+                android:textColor="#333333"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="金龟馅饼"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/bg_search_white"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+        <View android:layout_width="fill_parent"
+            android:layout_height="15dp"
+            android:background="#ffffff" />
+
+    </LinearLayout>
+
+
+    <ListView android:visibility="gone"
+        android:id="@+id/search_lv_tips"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+    </ListView>
+
+</LinearLayout>
