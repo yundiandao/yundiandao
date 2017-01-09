@@ -7,9 +7,6 @@ import android.widget.Toast;
 import com.saijie.youka.R;
 import com.saijie.youka.base.BaseActivity;
 
-
-
-
 public class AddressActivity extends BaseActivity {
 
     @Override

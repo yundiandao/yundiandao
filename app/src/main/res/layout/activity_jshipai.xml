@@ -1,10 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:background="#ededed"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
               android:orientation="vertical"
-              tools:context=".fn.JspActivity">
+              android:background="#ededed"
+              tools:context=".fn.JshipaiActivity">
+
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -42,16 +44,20 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="全部"
+                android:drawableLeft="@mipmap/jsp_all"
                 android:textSize="20sp"
                 android:clickable="true"
-                android:onClick="showRegister"
                 android:textColor="#999999"/>
         </LinearLayout>
         <!--头部End-->
     </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:src="@mipmap/jsp_banner"/>
 
 
 

@@ -23,7 +23,7 @@ import com.saijie.youka.details.SellerActivity;
 import com.saijie.youka.fn.AddressActivity;
 import com.saijie.youka.fn.FqjcActivity;
 import com.saijie.youka.fn.FriendActivity;
-import com.saijie.youka.fn.JspActivity;
+import com.saijie.youka.fn.JshipaiActivity;
 import com.saijie.youka.fn.LoginActivity;
 import com.saijie.youka.fn.MyaddressActivity;
 import com.saijie.youka.fn.MyexchangeActivity;
@@ -49,7 +49,6 @@ public class MainActivity extends Activity {
   //  private ImageView menu_icon;
   //  private PopupMenu popupMenu;
       private TitlePopup titlePopup;
-
 
 
     // 布局集合 实现主界面的左右滑动效果
@@ -280,9 +279,10 @@ public class MainActivity extends Activity {
             viewPager.setCurrentItem(ME_INDEX, false);
         }
     }
+
 //及时拍
-    public void showJsp(View view){
-        Intent intent = new Intent(MainActivity.this, JspActivity.class);
+    public void showJshipai(View view){
+        Intent intent = new Intent(MainActivity.this, JshipaiActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
         startActivity(intent);
 
